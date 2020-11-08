@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./vues/vjcNombre.css" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app" v-bind:class="{chanceux :this.mPartieEstGagnee} ">
+    <vjc-nombre v-bind:m-tirage-indicateur="mTirageIndicateur" v-bind:m-mode-triche="mModeTriche" v-on:on-gagnant="regarderSiGagnant"></vjc-nombre>
+    <vjc-nombre v-bind:m-tirage-indicateur="mTirageIndicateur" v-bind:m-mode-triche="mModeTriche" v-on:on-gagnant="regarderSiGagnant"></vjc-nombre>
+    <vjc-nombre v-bind:m-tirage-indicateur="mTirageIndicateur" v-bind:m-mode-triche="mModeTriche" v-on:on-gagnant="regarderSiGagnant"></vjc-nombre>
+    <div>score: {{this.mScore}}</div>
+    <button v-on:click="jouer(false)">Jouer</button>
+    <button v-on:click="jouer(true)">Tricher</button>
+
+  </div>
+  <footer>
+  <script src="vues/vjcNombre.js"></script>
+    <script src="vues/vjmLuckySeven.js"></script>
+  </footer>
+</body>
+
+</html>

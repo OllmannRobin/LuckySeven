@@ -1,0 +1,11 @@
+.nombre {
+  font-size: 3rem;
+  font-weight: bold;
+  border: 2px solid black;
+}
+.victoire {
+  background-color: yellow;
+}
+.chanceux > span {
+  background-color: green;
+}
