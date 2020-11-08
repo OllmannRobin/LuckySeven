@@ -1,0 +1,14 @@
+.chanceux > div.nombre {
+  background-color: green;
+}
+.nombres-conteneur {
+  display: flex;
+  justify-content: space-around;
+}
+.button-conteneur {
+  display: flex;
+  justify-content: center;
+}
+.button-play {
+  margin: 2rem;
+}

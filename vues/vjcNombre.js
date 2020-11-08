@@ -10,7 +10,7 @@ Vue.component('vjcNombre', {
     }
   },
   
-  template:'<span v-bind:class="{victoire :this.mNombreEstVictorieux, nombre:true} ">{{this.mValeurDuNombre}}</span>',
+  template:'<div v-bind:class="{victoire :this.mNombreEstVictorieux, nombre:true} ">{{this.mValeurDuNombre}}</div>',
   methods:{
     tirerNombre(){
       this.mModeTriche ? this.mValeurDuNombre = this.mCibleQuiDoitEtreAtteindre : this.mValeurDuNombre = Math.floor(Math.random()*Math.floor(this.mValeurMaximaleNombre));
@@ -20,8 +20,9 @@ Vue.component('vjcNombre', {
       this.mValeurDuNombre === this.mCibleQuiDoitEtreAtteindre ? ( this.mNombreEstVictorieux = true, this.$emit('on-gagnant', true)) : this.mNombreEstVictorieux = false }
   },
   watch:{
-    mTirageIndicateur: function(){
+    
+    /* mTirageIndicateur: function(){
       this.tirerNombre(); 
-    }
+    } */
   },
 })

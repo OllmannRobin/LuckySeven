@@ -4,17 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="./vues/vjmLuckyseven.css" type="text/css">
   <link rel="stylesheet" href="./vues/vjcNombre.css" type="text/css">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
-  <div id="app" v-bind:class="{chanceux :this.mPartieEstGagnee} ">
-    <vjc-nombre v-bind:m-tirage-indicateur="mTirageIndicateur" v-bind:m-mode-triche="mModeTriche" v-on:on-gagnant="regarderSiGagnant"></vjc-nombre>
-    <vjc-nombre v-bind:m-tirage-indicateur="mTirageIndicateur" v-bind:m-mode-triche="mModeTriche" v-on:on-gagnant="regarderSiGagnant"></vjc-nombre>
-    <vjc-nombre v-bind:m-tirage-indicateur="mTirageIndicateur" v-bind:m-mode-triche="mModeTriche" v-on:on-gagnant="regarderSiGagnant"></vjc-nombre>
-    <div>score: {{this.mScore}}</div>
-    <button v-on:click="jouer(false)">Jouer</button>
-    <button v-on:click="jouer(true)">Tricher</button>
+  <div id="app">
+    <div class="nombres-conteneur" v-bind:class="{chanceux :this.mPartieEstGagnee}" >
+      <vjc-nombre v-bind:m-tirage-indicateur="mTirageIndicateur" v-bind:m-mode-triche="mModeTriche" v-on:on-gagnant="regarderSiGagnant"></vjc-nombre>
+      <vjc-nombre v-bind:m-tirage-indicateur="mTirageIndicateur" v-bind:m-mode-triche="mModeTriche" v-on:on-gagnant="regarderSiGagnant"></vjc-nombre>
+      <vjc-nombre v-bind:m-tirage-indicateur="mTirageIndicateur" v-bind:m-mode-triche="mModeTriche" v-on:on-gagnant="regarderSiGagnant"></vjc-nombre>
+    </div>
+
+      <div class="button-conteneur">
+        <button class="button-play" v-on:click="jouer(false)">Jouer</button>
+        <button class="button-play" v-on:click="jouer(true)">Tricher</button>
+      </div>
+      <div>score: {{this.mScore}}</div>
 
   </div>
   <footer>

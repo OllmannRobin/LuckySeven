@@ -10,11 +10,13 @@
         mScore: 0
 
       },
+      // TODO GESTION DES ERREURS AVEC TRY CATCH
       methods:{
         initialiserPartie(){
-          this.mPartieEstGagnee = false, this.mCompteur=0 
+          this.mPartieEstGagnee = false;
+          this.mCompteur=0 
           },
-        jouer(pTriche= false){
+        jouer(pTriche = false){
           this.initialiserPartie();
           pTriche ? this.mModeTriche = true : this.mModeTriche = false;
           this.mTirageIndicateur = !this.mTirageIndicateur;
